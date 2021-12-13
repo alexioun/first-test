@@ -1,0 +1,844 @@
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+body {
+	color:black;
+	background-color: #FFE4E1;
+	background-image:url(https://img.myloview.fr/papiers-peints/vector-seamless-pattern-avec-des-points-d-interrogation-contexte-d-hipster-monochrome-signes-de-ponctuation-noirs-aleatoires-tires-a-la-main-160-100134452.jpg);
+	counter-reset: section;
+	}
+
+div.bandeau1 {
+	position: relative;
+	width: 92%;
+	height: 100%;
+	margin: auto;
+	margin-top: 10px;
+	background-color: #F6F7F3;
+	border: 5px #78A419 dotted;
+	border-radius: 45px;
+	padding-bottom: 0;
+	overflow: scroll;
+	}
+
+/************************** FOOTER **************************/
+
+.footer {
+	position: relative;
+	width: 100%;
+	height: 140px;
+	background-color: #90b498;
+	bottom: 0;
+	margin-top: 40px;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+	padding-top: 30px;
+}
+
+#acheter {
+	position: absolute;
+	margin-top: 70px;
+	margin-left: 10%;
+	font-family: "Champagne & Limousines";
+	font-size:22px;
+	color: white;
+	font-weight: bold;
+}
+
+#acheter:hover {
+	text-decoration: underline;
+}
+
+
+/************ RATING *****/
+
+fieldset, label { 
+	margin: 0; 
+	padding: 0; 
+}
+
+#rating {
+	margin-left: 20%;
+}
+
+#rate {
+	font-family: "Champagne & Limousines";
+	font-size:22px;
+	color: white;
+	font-weight: bold;
+}
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { 
+	display: none; 
+} 
+
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+#commentaire {
+	margin-left: 55%;
+}
+
+#comment {
+	font-family: "Champagne & Limousines";
+	font-size:22px;
+	color: white;
+	font-weight: bold;
+	margin-top: -45px;
+	margin-bottom: 5px;
+}
+
+label {
+	font-family: "Champagne & Limousines";
+	font-size:15px;
+	font-weight: bold;
+}
+
+textarea {
+	width: 50%;
+	height: 50px;
+	margin-bottom: -40px;
+	font-family: "Champagne & Limousines";
+	font-size:13px;
+}
+
+input {
+	font-family: "Champagne & Limousines";
+	font-size:13px;
+}
+
+
+/************************** EN TETE **************************/
+
+#img_titre {
+	position: absolute;
+	width: 25%;
+	height: 120px;
+}
+
+#legend {
+	position: absolute;
+	font-family: "Champagne & Limousines";
+	text-align: center;
+	font-size: 25px;
+	margin-left: 5%;
+	margin-top: 2%;
+	font-weight: bold;
+}
+
+#img2_titre {
+	position: absolute;
+	right: 4.9%;
+	top: 90px;
+	width: 20%;
+	height: 190px;
+	opacity: 0.6;
+	z-index: 100;
+}
+#img3_titre {
+	position: absolute;
+	right: 5%;
+	top: 100px;
+	width: 20%;
+	height: 150px;
+}
+
+.grostitre {
+	text-align:center;
+	font-family: Summer in december;
+	font-size: 60px;
+	margin-top: 60px;
+	margin-bottom: 0px;
+}
+
+.soustitre {
+	text-align:center;
+	font-family: Summer in december;
+	font-size: 45px;
+	margin-top: 10px;
+}
+
+.auteur {
+	text-align:center;
+	font-family: Summer in december;
+	text-transform: uppercase;
+	font-size: 45px;
+	margin-top: 15px;
+	font-weight: bold;
+	color: #78A419;
+}
+
+.auteur::before {
+	content: "\007E  ";
+	font-family: Avenir;
+}
+
+.auteur::after {
+	content: "  \007E";
+	font-family: Avenir;
+}
+
+
+/* POLICES */
+
+.text-gras {font-weight: bold;}
+.text-italic {font-style: italic;}
+.text-blanc {color: white;}
+
+/************************** SOMMAIRE **************************/
+
+/* Bandeau gris*/
+nav {
+	width: 100%;
+	height: 50px;
+	margin-top: 50px;
+	background-color: #696969;
+	border-bottom: 2px grey double;
+	border-top: 2px grey double;
+	}
+
+/* Couleur de tous les liens dans le menu*/
+#menu a {
+	color: white;
+}
+
+/* Police des textes dans le menu*/
+#menu {
+	text-align:center;
+	font-family: Summer in december;
+	font-size: 25px;
+	color: white;
+	text-transform: uppercase;
+}
+
+/* Comportement des li de la barre principale */
+#menu > li {
+	list-style-type: none;
+	margin-right: 9%;	/* pour espacer les sections */
+	margin-left: 9%;
+	display:inline-block;
+	position:relative;
+	padding: 0;
+	bottom: 22px; /* décalage des titres des sections par rappport au bas du bandeau gris */
+	}
+#menu > li.logo {
+	list-style-type: none;
+	margin-right: 1%;	/* pour espacer les sections */
+	display:inline-block;
+	position:relative;
+	padding: 0;
+	bottom: 13px; /* décalage des titres des sections par rappport au bas du bandeau gris */
+	}
+
+
+#menu > li:hover {
+	padding: 0;
+	padding-bottom: 34px;
+}
+
+.submenu {display: none;}
+
+nav li:hover .submenu {
+	position: absolute;
+	display: inline-block;
+	top: 60%;
+	left:-63px;
+	padding:0px;
+	z-index: 10000;
+}
+
+.submenu li {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	width: 200px;
+	list-style:none;
+	border-bottom: 1px solid #000;
+}
+
+a {
+	text-decoration:none;  /* Ne pas souligner les liens */
+}
+
+
+/* background des liens sous menus */
+#menu li li {background:#3C4917;}
+
+/* background des liens menus et sous menus au survol */
+#menu li li:hover {background: #696969;}
+
+/* LOGO ENVELOPPE*/
+
+.transition-logo {
+	-webkit-transition-property: transform;
+    -webkit-transition-duration: 1s; 
+}
+
+.transition-logo:hover {
+	transform: scale(1.2)
+}
+
+#contact span{
+     position:absolute;  
+     margin-top:30px;
+     margin-left:-115px;
+     color:#78A419;
+     font-family: "Champagne & Limousines";  
+     text-transform: lowercase;
+     font-size: 15px;
+     background:rgba(0,0,0,.8);
+     padding:6px;
+     border-radius:3px;
+     box-shadow:0 0 2px rgba(0,0,0,.5);
+     transition:all .25s;
+     transform:scale(0) rotate(-12deg); 
+     opacity:0;         
+}
+
+#contact:hover span, #contact:focus span{
+     transform:scale(1) rotate(0);  
+     opacity:1;      
+}
+
+#contact img {
+	width:30px;
+	height:30px;
+}
+
+/************************** AUTRES **************************/
+
+div.trait-vert {
+	width: 100%;
+	height: 4px;
+	background-color: #78A419;
+	margin: auto;
+	margin-top: 30px;
+}
+
+div.box-vert {
+	position: relative;
+	width : 350px;
+	height: 35px;
+	background-color: #78A419;
+	margin: auto;
+	bottom: 22px;
+	border-radius: 30px;
+	padding-top: 10px;
+}
+
+.text-box-vert {
+	text-align: center;
+	color: white;
+	font-family: "Winter Calligraphy";
+	font-size: 25px;
+}
+
+#texte-bienvenue {
+	margin-left: 55%;
+	position: relative;
+	margin-top: 90px;
+	right: 100px;
+	width: 47%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: justify;
+	text-indent: 30px;
+	font-size: 17px;
+}
+
+#premiers-mots {
+	width: 90%;
+	margin:auto;
+	margin-top: 50px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: justify;
+	text-indent: 45px;
+	font-size: 16px;
+}
+
+/************************** DIAPORAMA **************************/
+
+@-webkit-keyframes diapo {
+	0%{background-image: url(https://www.babelio.com/users/AVT_Rene-Descartes_4208.jpg);
+	    background-size: 220px 290px;}
+	33%{background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Descartes-moncornet.jpg/220px-Descartes-moncornet.jpg);
+	    background-size: 220px 290px;}
+	66%{background-image: url(https://abp.bzh/photos/27/27670_1.jpg);
+		background-size: 220px 290px;}
+}
+
+.diaporama {
+	margin-left:10%;
+	margin-top: -180px;
+	margin-bottom: 80px; 
+	width: 220px;
+	height: 290px;
+	border: 3px solid grey;
+	background-image: url(https://www.babelio.com/users/AVT_Rene-Descartes_4208.jpg);
+	background-size: 220px 290px;
+	-webkit-animation-name: diapo;
+	-webkit-animation-duration:20s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-direction:normal;
+}
+
+/************************** REMONTER VERS LE HAUT **************************/
+
+.top {
+   position:fixed;
+   bottom:25px;
+   right: 60px;
+   z-index: 1000;
+   background-color: transparent;
+   border:none;
+}
+
+#top {
+ width:35px; 
+ height:35px;
+}
+
+/************************** TEXTE **************************/
+
+.texte {
+    color: #000000;
+    font-size: 15px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-align: justify;
+    text-indent:50px;
+}
+
+#texte {
+	width: 90%;
+	margin-top: 30px;
+	margin: auto;
+}
+
+/************************** SON OEUVRE **************************/
+
+.oeuvres {
+	height: 300px;
+	margin-top: 50px;
+}
+
+.date {
+	margin-left: 90px;
+	font-family: "Summer in december";
+	font-weight: bold;
+	color: grey;
+	font-size: 20px;
+} 
+
+#texte-oeuvre {
+	width: 90%;
+	margin:auto;
+	margin-top: 50px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: justify;
+	text-indent: 0px;
+	font-size: 15px;
+}
+#texte-oeuvre p {
+	text-indent: 40px;
+}
+
+#texte-oeuvre h2 {
+	width: 80%;
+	margin: auto;
+	margin-top: 50px;
+	text-align: center;
+	font-size: 40px;
+	color: #41674a;
+	font-family: "Summer in december";
+	font-weight: bold;
+	border-top: solid 2px #41674a;
+	padding:30px;
+}
+
+#texte-oeuvre h3 {
+	color: #41674a;
+	counter-reset: sous_section;
+}
+
+#texte-oeuvre h3::before {
+	counter-increment: section;
+    content: counter(section) ". ";
+}
+
+#texte-oeuvre h4 {
+	margin-left: 10%;
+	color: #659470;
+}
+
+#texte-oeuvre h4::before {
+	counter-increment: sous_section;
+    content: counter(sous_section) ". ";
+}
+
+
+#philo {
+	color: black;
+	font-weight: bold;
+}
+
+#philo:hover {
+	text-decoration: underline;
+}
+
+/************************** SA VIE **************************/
+
+table {
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: justify;
+	font-size: 15px;
+	border-collapse: collapse;
+}
+
+td {
+	width: 50%;
+}
+
+
+td.titre_gauche {
+	border-bottom: 2px dotted grey;
+	border-right: 4px solid grey;
+	padding-right: 50px;
+	padding-top: 30px;
+	font-weight: bold;
+}
+
+td.gauche {
+	border-right: 4px solid grey;
+	padding-right: 50px;
+	text-indent: 50px;
+	padding-bottom: 20px;
+} 
+
+td.droite {
+	padding-left: 50px;
+	text-indent: 50px;
+}
+
+td.titre_droite {
+	border-bottom: 2px dotted grey;
+	padding-left: 50px;
+	padding-top: 30px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.puces_gauche {
+		position: relative;
+		left:-64px;
+		top: 22px;
+  		width: 20px; 
+  		height: 20px;
+  		border-radius: 50%;
+  		background: black;
+  		background-image: linear-gradient(to left, transparent 50%, #78A419 0);
+}
+
+.puces_droite {
+		position: relative;
+		margin-left: 108.5%;
+		top: 32px;
+  		width: 20px; 
+  		height: 20px;
+  		border-radius: 50%;
+  		background: black;
+  		background-image: linear-gradient(to right, transparent 50%, #78A419 0);
+}
+
+#galile {
+	width: 400px;
+	height: 200px;
+	border: 2px solid grey ;
+	border-radius: 10px;
+	margin-top: -10%;
+	margin-left: -60px;
+}
+
+#elisabeth {
+	width: 300px;
+	height: 200px;
+	border: 2px solid grey ;
+	border-radius: 10px;
+	bottom: 0px;
+	margin-top: 16px;
+	margin-left: -10px;
+}
+
+#ville {
+	width: 170px;
+	height: 200px;
+	border-radius: 10px;
+	border: 2px solid #78A419 ;
+	margin-right: 10px;
+	margin-left: -50px;
+}
+
+#map {
+	display: inline;
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	border: 2px solid #78A419 ;
+}
+
+#beeckman {
+	width: 300px;
+	height: 300px;
+	border-radius: 10px;
+	border: 2px solid grey ;
+	margin-left: 100px;
+}
+
+#christine {
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	border: 2px solid grey ;
+	margin-left: 170px;
+}
+
+.img #legendgal, .img #legendeli, .img #legendmap, .img #legendbeeckman, .img #legendchristine  {
+	display: none;
+}
+
+#img_gal:hover #legendgal {
+	display: block;
+	position: relative;
+	width: 400px;
+	height: 35px;
+	opacity: 0.6;
+	margin-top: -52px;
+	margin-left: -10px;
+	background-color: black;
+	border: 2px solid grey ;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	z-index: 1000;
+	bottom: 0;
+	text-align: center;
+	text-indent: 0px;
+	color: white;
+	padding-top: 13px;
+	font-family: "Champagne & Limousines";
+}
+
+#img_eli:hover #legendeli {
+	display: block;
+	position: relative;
+	width: 210px;
+	height: 37px;
+	opacity: 0.6;
+	margin-top: -53px;
+	margin-left: 40px;
+	background-color: black;
+	border: 2px solid grey ;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	z-index: 1000;
+	bottom: 0;
+	text-align: center;
+	text-indent: 0px;
+	color: white;
+	padding-top: 8px;
+	padding-bottom: 5px;
+	padding-right: 45px;
+	padding-left: 45px;
+	font-family: "Champagne & Limousines";
+	font-size: 15px;
+}
+
+#img_map:hover #legendmap {
+	display: block;
+	position: relative;
+	width: 380px;
+	height: 23px;
+	opacity: 0.6;
+	margin-top: 0px;
+	margin-left: 0px;
+	background-color: black;
+	border: 2px solid #78A419 ;
+	border-radius: 10px;
+	z-index: 1000;
+	bottom: 0;
+	text-align: center;
+	text-indent: 0px;
+	color: white;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-left: 0px;
+	font-family: "Champagne & Limousines";
+	font-size: 15px;
+}
+
+#img_beeckman:hover #legendbeeckman {
+	display: block;
+	position: relative;
+	width: 300px;
+	height: 23px;
+	opacity: 0.6;
+	margin-top: -33px;
+	margin-left: 150px;
+	background-color: black;
+	border: 2px solid grey ;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	z-index: 1000;
+	bottom: 0;
+	text-align: center;
+	text-indent: 0px;
+	color: white;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-left: 0px;
+	font-family: "Champagne & Limousines";
+	font-size: 15px;
+}
+
+#img_christine:hover #legendchristine {
+	display: block;
+	position: relative;
+	width: 200px;
+	height: 23px;
+	opacity: 0.6;
+	margin-top: -33px;
+	margin-left: 220px;
+	background-color: black;
+	border: 2px solid grey ;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	z-index: 1000;
+	bottom: 0;
+	text-align: center;
+	text-indent: 0px;
+	color: white;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-left: 0px;
+	font-family: "Champagne & Limousines";
+	font-size: 15px;
+}
+
+@media screen and (max-width: 1150px) {
+	img.img {display: none;}
+	.img img {display: none;}
+	#map {display: none;}
+	#menu > li.logo {display: none;}
+	#commentaire {display: none;}
+	#legend {display: none;}
+}
+
+@media screen and (max-width: 950px){
+	.diaporama {visibility: hidden;}
+}
+
+audio {
+	margin-left: 40%;
+	margin-bottom: 50px;
+}
+
+
+/************************** QUIZ **************************/
+
+
+button#quiz {
+	width: 300px;
+	height: 100px;
+	font-family: "Summer in december";
+	font-size: 35px;
+	text-align: center;
+	background-color: grey;
+	color: white;
+	margin-left: 38%;
+	margin-top: 10px;
+	margin-bottom: 100px;
+}
+
+#question {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	margin: auto;
+	text-align: center;
+	font-family: "Summer in december";
+	font-weight: bold;
+	font-size: 30px;
+}
+
+#reponses {
+	margin: auto;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#bouton_reponses {
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: white;
+	background-color: #41674a;
+	border:black solid 1px;
+	margin-top: 10px;
+	border-radius: 7px;
+	margin-right: 10px;
+	margin-bottom: 100px;
+	vertical-align: top;
+}
+
+#bouton_reponses:hover {
+	cursor: pointer;
+}
+
+#score {
+	position: absolute;
+	top: 600px;
+	left: 47%;
+	color: #41674a;
+	text-align: center;
+	font-family: "Summer in december";
+	font-size: 25px;
+	padding-bottom: 100px;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
